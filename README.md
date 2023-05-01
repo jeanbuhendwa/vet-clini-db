@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Vet Clinic] <a name="about-project"></a>
 
 **[Vet_clinic]** is an app that stores all the information about a pet into sql database.
 
