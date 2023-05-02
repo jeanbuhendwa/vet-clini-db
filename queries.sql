@@ -67,10 +67,33 @@ WHERE Date_of_Birth > '2022-01-01';
 SAVEPOINT delete_age_greater;
 
 UPDATE animals
-SET weight_kg = weight_kg * (1);
+SET weight_kg = weight_kg * (-1);
 
 ROLLBACK to SAVEPOINT delete_age_greater;
 
 UPDATE animals
 SET weight_kg = weight_kg * (-1)
 WHERE weight_kg < 0;
+
+
+-- Write queries to answer the following questions:
+
+-- How many animals are there?
+SELECT COUNT(*) AS total FROM animals;
+
+-- How many animals have never tried to escape?
+SELECT COUNT(*) AS total FROM animals WHERE escape_attempts = 0;
+
+-- What is the average weight of animals?
+SELECT AVG(weight_kg) as avg_weight FROM animals;
+
+-- Who escapes the most, neutered or not neutered animals?
+SELECT neutered, MAX(escape_attempts) as max_escape FROM animals GROUP BY neutered;
+
+-- What is the minimum and maximum weight of each type of animal?
+SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight FROM animals GROUP BY species;
+
+-- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+SELECT species, AVG(escape_attempts) as avg_weight FROM animals 
+WHERE EXTRACT(YEAR FROM date_of_birth) BETWEEN 1990 AND 2000 GROUP BY species;
+
