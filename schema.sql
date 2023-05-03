@@ -14,3 +14,6 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(100);
 
 -- Create a table named owners
 CREATE TABLE owners (Id SERIAL PRIMARY KEY, full_name VARCHAR(255) NOT NULL, age INT);
+
+-- Create a table named species
+CREATE TABLE species(Id SERIAL PRIMARY KEY, name VARCHAR(255));
