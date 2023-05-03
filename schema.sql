@@ -17,3 +17,7 @@ CREATE TABLE owners (Id SERIAL PRIMARY KEY, full_name VARCHAR(255) NOT NULL, age
 
 -- Create a table named species
 CREATE TABLE species(Id SERIAL PRIMARY KEY, name VARCHAR(255));
+
+-- Remove column species
+ALTER TABLE animals DROP COLUMN species;
+
