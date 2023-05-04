@@ -172,3 +172,10 @@ SELECT name FROM
  JOIN visits ON vets.id = visits.vet_id)) will_vets
  JOIN animals ON will_vets.animal_id = animals.id) as visit
  ORDER BY date_of_visit LIMIT 1;
+
+-- Details for most recent visit: animal information, vet information, and date of visit.
+SELECT *
+FROM vets
+JOIN visits ON vets.id = visits.vet_id
+JOIN animals ON animals.id = visits.animal_id
+ORDER BY date_of_visit DESC LIMIT 1;
