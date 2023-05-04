@@ -70,3 +70,11 @@ VALUES  ('William Tatcher', 45, '2000-04-23'),
         ('Maisy Smith', 26, '2019-01-17'),
         ('Stephanie Mendez', 64, '1981-05-04'),
         ('Jack Harkness', 38, '2008-06-08');
+
+-- Insert the following data for specialties
+INSERT INTO specializations (species_id, vet_id)
+SELECT species.id AS species_id, vets.id AS vet_id
+FROM species, vets
+WHERE (vets.name = 'William Tatcher' AND species.name = 'Pokemon')
+   OR (vets.name = 'Stephanie Mendez' AND species.name IN ('Digimon','Pokemon'))
+   OR (vets.name = 'Jack Harkness' AND species.name = 'Digimon');
