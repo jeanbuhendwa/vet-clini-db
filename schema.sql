@@ -30,4 +30,14 @@ CREATE TABLE vets (
     id SERIAL PRIMARY KEY, 
     name VARCHAR(100) NOT NULL, 
     age INT NOT NULL, 
-    date_of_graduation DATE NOT NULL);
+    date_of_graduation DATE NOT NULL
+    );
+
+-- Create a "join table" called specializations
+CREATE TABLE specializations (
+  species_id INT,
+  vet_id INT,
+  PRIMARY KEY (species_id, vet_id),
+  CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id),
+  CONSTRAINT fk_vet FOREIGN KEY(vet_id) REFERENCES vets(id)
+);
