@@ -190,3 +190,13 @@ FULL JOIN specializations ON vets.id = specializations.vet_id
 FULL JOIN species ON species.id = specializations.species_id
 WHERE specializations.species_id IS NULL) vet 
 ON vet.id = visits.vet_id;
+
+
+-- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+SELECT name, COUNT(*) AS total
+FROM (SELECT animals.species_id FROM (SELECT id FROM vets WHERE name = 'Maisy Smith') as vet
+JOIN visits ON visits.vet_id = vet.id
+JOIN animals ON animals.id = visits.animal_id) as all_visits
+JOIN species ON all_visits.species_id = species.id
+GROUP BY name 
+ORDER BY total DESC LIMIT 1;
