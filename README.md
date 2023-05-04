@@ -10,7 +10,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -52,11 +51,41 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+<!-- GETTING STARTED -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 💻 Getting Started <a name="getting-started"></a>
 
-- [Live Demo Link currently not available]
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need: PostgreSQL or any other SQL database.
+
+### Setup
+
+Clone this repository to your desired folder:
+
+Clone this [repository](https://github.com/jeanbuhendwa/vet-clini-db) to your desired folder.
+
+### Install
+
+Install this project with: Install [PostgreSQL](https://www.postgresql.org/download/)
+
+### Usage
+
+To run the project, execute the following command:
+
+- Start Postgres server.
+- Run psql.
+- Create table.
+
+### Run tests
+
+To run tests, run the following command: **Not available**.
+
+### Deployment
+
+You can deploy this project using: **Not available**.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
