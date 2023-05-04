@@ -41,3 +41,14 @@ CREATE TABLE specializations (
   CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id),
   CONSTRAINT fk_vet FOREIGN KEY(vet_id) REFERENCES vets(id)
 );
+
+
+-- Create a "join table" called visits
+CREATE TABLE visits (
+  animal_id INT,
+  vet_id INT,
+  date_of_visit DATE,
+  PRIMARY KEY (animal_id, vet_id, date_of_visit),
+  CONSTRAINT fk_animal FOREIGN KEY(animal_id) REFERENCES animals(id),
+  CONSTRAINT fk_vet FOREIGN KEY(vet_id) REFERENCES vets(id)
+);
