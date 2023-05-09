@@ -13,3 +13,13 @@ CREATE TABLE treatments(
 	name varchar(100),
 	type varchar(100)
 );
+
+
+-- Create medical history table 
+DROP TABLE IF EXISTS medical_histories;
+CREATE TABLE medical_histories(
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	admitted_at TIMESTAMP,
+	patient_id INT REFERENCES patients(id),
+	status varchar(100)
+);
