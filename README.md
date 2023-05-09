@@ -99,6 +99,13 @@ You can deploy this project using: **Not available**.
 - Twitter: [@jeanbuhendwa](https://twitter.com/jeanjacqueI)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/johnbuhendwa/)
 
+👤 **Damilare Adepoju**
+
+- GitHub: [@githubhandle](https://github.com/adamilare)
+- Twitter: [@twitterhandle](https://twitter.com/mailtodare)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/adamilare)
+- GitUp Page: [My Page](https://adamilare.github.io/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
