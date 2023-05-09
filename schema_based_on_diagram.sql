@@ -5,3 +5,11 @@ CREATE TABLE patients(
 	name varchar(100),
 	date_of_birth DATE
 );
+
+-- Create treatment table
+DROP TABLE IF EXISTS treatments;
+CREATE TABLE treatments(
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	name varchar(100),
+	type varchar(100)
+);
