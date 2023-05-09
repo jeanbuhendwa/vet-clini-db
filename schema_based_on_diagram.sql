@@ -78,3 +78,6 @@ CREATE TABLE treatments_invoice_items(
 	treatment_id INT REFERENCES treatments(id),
 	medical_history_id INT REFERENCES invoice_items(id)
 );
+
+CREATE INDEX treatment_invoice_id ON treatments_medical_histories(treatment_id)
+CREATE INDEX medical_history_id ON treatments_medical_histories(medical_history_id)
