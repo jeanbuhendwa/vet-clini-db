@@ -52,3 +52,29 @@ CREATE INDEX medical_history_id ON invoices(medical_history_id)
 CREATE INDEX treatment_id ON invoice_items(treatment_id)
 
 CREATE INDEX invoice_id ON invoice_items(invoice_id)
+
+-- join tables
+
+CREATE TABLE patients_medical_histories(
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	patient_id INT REFERENCES patients(id),
+	medical_history_id INT REFERENCES medical_histories(id)
+);
+
+CREATE TABLE invoice_items_medical_histories(
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	invoice_item_id INT REFERENCES invoice_items(id),
+	medical_history_id INT REFERENCES medical_histories(id)
+);
+
+CREATE TABLE treatments_medical_histories(
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	treatment_id INT REFERENCES treatments(id),
+	medical_history_id INT REFERENCES medical_histories(id)
+);
+
+CREATE TABLE treatments_invoice_items(
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	treatment_id INT REFERENCES treatments(id),
+	medical_history_id INT REFERENCES invoice_items(id)
+);
